@@ -1,0 +1,248 @@
+body {
+  display: flex;
+  flex-direction: column;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  margin: 0;
+  min-height: 100vh;
+  height: 100vh;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  background-image: url("../img/bg_person.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+body header .nameLogo_container {
+  padding: 2% 3%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-basis: 320px;
+  text-shadow: 2px 2px 5px rgba(15, 36, 54, 0.55);
+  -webkit-text-shadow: 2px 2px 5px rgba(15, 36, 54, 0.55);
+  -moz-text-shadow: 2px 2px 5px rgba(15, 36, 54, 0.55);
+  font-weight: 700;
+}
+body header .nameLogo_container .nameLogo {
+  font-size: 4.5em;
+  color: #f1f1f1;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+body header .nameLogo_container .nameLogo_subline1 {
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #f1f1f1;
+}
+@media only screen and (max-width: 480px) {
+  body header .nameLogo_container {
+    align-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body header .nameLogo_container {
+    padding-top: 5%;
+  }
+}
+body main {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-grow: 1;
+}
+body main .link_container {
+  display: inline-block;
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+body main .link_container .link_box {
+  transition: all 0.35s ease-in-out;
+}
+body main .link_container .link_box:hover {
+  transform: scale(1.1);
+}
+body main .link_container .link_box i {
+  font-size: 2em;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 3px #0f2436;
+}
+body main .link_container label {
+  font-size: 1.3em;
+  color: #f1f1f1;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px #0f2436;
+}
+@media only screen and (max-width: 480px) {
+  body main .link_container label {
+    display: none;
+  }
+}
+body main .fotocopy_container {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+}
+body main .fotocopy_container .fotocopy_text {
+  padding: 2em;
+  color: #f1f1f1;
+  font-size: 0.7em;
+  font-weight: 200;
+}
+body footer {
+  height: 50px;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #0f2436;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body footer p {
+  color: #f1f1f1;
+  letter-spacing: normal;
+  line-height: 1.2;
+  margin: 0;
+}
+body footer p span {
+  font-size: 0.7em;
+  margin: 0;
+}
+body footer p #impressum {
+  font-size: 0.9em !important;
+}
+body .overlay {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 300;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  overflow-x: hidden;
+  transition: 0.7s;
+}
+body .overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 1em;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+body .overlay a:hover {
+  color: #f1f1f1;
+}
+body .overlay a:focus {
+  color: #f1f1f1;
+}
+body .overlay > * {
+  font-size: 1em;
+  color: #fff;
+}
+body .overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+body .overlay .closebtnCon button {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  line-height: 90px;
+  outline: none;
+  overflow: hidden;
+  padding: 10px 0 0;
+  display: block;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-in;
+  width: 100px;
+  margin: 5% 50%;
+}
+body .overlay .closebtnCon button::before,
+body .overlay .closebtnCon button::after {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  transform-origin: center left;
+  transition: all 0.2s ease-in;
+  width: 141.4214px;
+  z-index: -1;
+}
+body .overlay .closebtnCon button::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+body .overlay .closebtnCon button::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+body .overlay .closebtnCon button:hover {
+  color: #333;
+}
+body .overlay .closebtnCon button:hover::before,
+body .overlay .closebtnCon button:hover::after {
+  height: 50px;
+  transform: rotate(0deg);
+}
+body .overlay-content {
+  position: relative;
+  top: 10%;
+  width: 70%;
+  text-align: left;
+  display: block;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 480px) {
+  body .overlay a {
+    font-size: 20px;
+  }
+  body .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  body .overlay .closebtnCon button {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+body h3 {
+  text-shadow: 2px 2px 5px rgba(51, 51, 51, 0.3);
+  -webkit-text-shadow: 2px 2px 5px rgba(51, 51, 51, 0.3);
+  -moz-text-shadow: 2px 2px 5px rgba(51, 51, 51, 0.3);
+  font-weight: 700;
+}
+body .contactContent {
+  margin-top: 25%;
+}
+body .contactContent a {
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */
